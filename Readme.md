@@ -52,6 +52,12 @@ $ make runtest -j`nproc` # optional
 
 ## FAQ ##
 ```
+0. fatal error: hdf5.h missing
+$ pkg-config hdf5 --libs --cflags
+-I/usr/include/hdf5/serial -L/usr/lib/x86_64-linux-gnu/hdf5/serial -lhdf5
+line92: INCLUDE_DIRS := $(PYTHON_INCLUDE) /usr/local/include /usr/include/hdf5/serial/
+line93: LIBRARY_DIRS := $(PYTHON_LIB) /usr/local/lib /usr/lib /usr/lib/x86_64-linux-gnu/hdf5/serial
+
 1. compile caffe with python3.6
 Note:
   caffe need protobuf < 3.0
